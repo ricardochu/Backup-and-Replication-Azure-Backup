@@ -1,6 +1,6 @@
 az group create \
 --name RG-19-Backup \
---location westeurope
+--location eastus2
 
 az network vnet create \
   --resource-group RG-19-Backup \
@@ -60,4 +60,4 @@ az vm extension set \
   --name CustomScript \
   --vm-name VM-02 \
   --resource-group RG-19-Backup \
-  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo Web Server in West Europe to Backup in North Europe Vault - VM-02 > /var/www/html/index.html"}'
+  --settings '{"commandToExecute":"apt-get -y update && apt-get -y install apache2 && echo Web Server in eastus2 to Backup in centralus Vault - VM-02 > /var/www/html/index.html"}'
